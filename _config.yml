@@ -1,0 +1,12 @@
+title: ShrijaSrs
+description: Personal website for Shrija — performer, speaker, researcher, and voice artist.
+url:
+baseurl: ""
+
+markdown: kramdown
+permalink: pretty
+
+plugins:
+  - jekyll-feed
+
+
