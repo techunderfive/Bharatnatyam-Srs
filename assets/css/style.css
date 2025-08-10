@@ -73,6 +73,11 @@
 /* SMALL ENHANCEMENTS */
 html { scroll-behavior: smooth; }
 
+/* Research lists */
+#research ul { margin: 0 0 1rem 1.1rem; }
+#research li { margin-bottom: .5rem; }
+#research h3, #research h4 { margin-bottom: .5rem; }
+
 /* GALLERY */
 .gallery {
   display: grid;
