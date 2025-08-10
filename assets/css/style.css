@@ -52,6 +52,12 @@
 .section h2 { margin-top: 0; font-size: clamp(1.5rem, 3.5vw, 2.25rem); }
 .muted { color: var(--muted); }
 
+/* Main page section title colors */
+#about h2,
+#services h2,
+#articles h2,
+#research h2 { color: #CC5500; }
+
 /* CARDS GRID */
 .cards {
   display: grid;
