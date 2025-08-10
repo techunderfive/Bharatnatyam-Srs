@@ -73,4 +73,15 @@
 /* SMALL ENHANCEMENTS */
 html { scroll-behavior: smooth; }
 
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.gallery figure { margin: 0; background: var(--card); border: 1px solid #121212; border-radius: 12px; overflow: hidden; }
+.gallery img { width: 100%; height: auto; display: block; }
+.gallery figcaption { padding: .5rem .75rem; color: var(--muted); }
+
 
