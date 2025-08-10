@@ -26,13 +26,13 @@ a:hover { color: var(--accent); }
 main#content { min-height: 70vh; }
 
 .site-footer {
-  border-top: 1px solid #222;
+  border-top: 1px solid #141414;
   padding: 2rem 1rem;
   text-align: center;
   color: var(--muted);
 }
 
-.container { width: min(1100px, 92vw); margin: 0 auto; }
+.container { width: min(1600px, 96vw); margin: 0 auto; }
 
 html { scroll-behavior: smooth; }
 

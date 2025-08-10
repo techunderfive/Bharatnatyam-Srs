@@ -12,7 +12,7 @@
 .hero__media {
   position: absolute;
   inset: 0;
-  background-position: center;
+  background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
   transform: scale(1.05);
@@ -32,7 +32,7 @@
 .hero__nav { display: inline-flex; gap: .75rem; flex-wrap: wrap; }
 .hero__nav a {
   padding: .5rem .9rem;
-  border: 1px solid #2a2a2a;
+  border: 1px solid #151515;
   border-radius: 999px;
   background: rgba(0,0,0,.35);
   backdrop-filter: blur(2px);
@@ -41,7 +41,7 @@
 .hero__scroll { display: inline-block; margin-top: 1.25rem; color: var(--muted); }
 
 /* STICKY SECTION NAV */
-.section-nav { position: sticky; top: 0; z-index: 10; background: rgba(0,0,0,.8); backdrop-filter: blur(6px); border-bottom: 1px solid #1a1a1a; }
+.section-nav { position: sticky; top: 0; z-index: 10; background: rgba(0,0,0,.8); backdrop-filter: blur(6px); border-bottom: 1px solid #121212; }
 .section-nav .container { display: flex; gap: 1rem; padding: .75rem 1rem; align-items: center; }
 .section-nav .container.sub { border-top: 1px dashed #222; padding-top: .5rem; padding-bottom: .5rem; color: var(--muted); font-size: .95rem; }
 .section-nav a { color: var(--text); }
@@ -60,7 +60,7 @@
 }
 .card {
   background: var(--card);
-  border: 1px solid #1b1b1b;
+  border: 1px solid #121212;
   border-radius: 12px;
   padding: 1rem;
 }
@@ -68,7 +68,7 @@
 
 /* POSTS */
 .posts { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; gap: 1rem; }
-.posts li { background: var(--card); border: 1px solid #1b1b1b; border-radius: 12px; padding: 1rem; }
+.posts li { background: var(--card); border: 1px solid #121212; border-radius: 12px; padding: 1rem; }
 
 /* SMALL ENHANCEMENTS */
 html { scroll-behavior: smooth; }
