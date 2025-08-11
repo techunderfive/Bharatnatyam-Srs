@@ -19,12 +19,23 @@
   will-change: transform;
   border-radius: 16px;
   overflow: hidden;
+  /* Stronger feathered edge into the page background */
+  -webkit-mask-image: radial-gradient(120% 120% at 50% 55%, #fff 55%, rgba(255,255,255,0.4) 70%, rgba(255,255,255,0) 88%);
+          mask-image: radial-gradient(120% 120% at 50% 55%, #fff 55%, rgba(255,255,255,0.4) 70%, rgba(255,255,255,0) 88%);
 }
 
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,.85));
+  /* Stronger vignette + multi-directional gradients to blend image with background */
+  background:
+    /* center-out vignette */
+    radial-gradient(120% 120% at 50% 55%, rgba(0,0,0,0) 40%, rgba(24,24,24,.65) 68%, rgba(0,0,0,.97) 100%),
+    /* top and bottom fades */
+    linear-gradient(to bottom, rgba(0,0,0,.75) 0%, rgba(0,0,0,.3) 25%, rgba(0,0,0,.45) 60%, rgba(0,0,0,.95) 100%),
+    /* side fades */
+    linear-gradient(to right, rgba(0,0,0,.9) 0%, rgba(0,0,0,0) 18%, rgba(0,0,0,0) 82%, rgba(0,0,0,.9) 100%);
+  box-shadow: inset 0 0 360px 120px rgba(0,0,0,.95);
 }
 
 .hero__content { position: relative; text-align: center; z-index: 1; }
