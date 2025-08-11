@@ -98,7 +98,7 @@ html { scroll-behavior: smooth; }
 
 /* Forms & Buttons */
 .form label { display: block; font-weight: 600; margin-bottom: .35rem; }
-.form input, .form textarea {
+.form input:not([type="checkbox"]):not([type="radio"]), .form textarea, .form select {
   width: 100%;
   background: #0b0b0b;
   border: 1px solid #121212;
@@ -107,6 +107,8 @@ html { scroll-behavior: smooth; }
   padding: .6rem .7rem;
 }
 .form__row { margin-bottom: .9rem; }
+
+.form input[type="checkbox"] { width: auto; margin-right: .5rem; vertical-align: middle; }
 
 .btn { display: inline-block; padding: .6rem 1rem; border-radius: 10px; border: 1px solid #121212; background: #161616; color: var(--text); }
 .btn:hover { background: #1d1d1d; color: var(--accent); }
