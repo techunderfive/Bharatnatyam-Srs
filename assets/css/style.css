@@ -61,6 +61,22 @@
 /* STICKY SECTION NAV */
 .section-nav { display:none; }
 
+/* Scroll-in nav (hidden at top, visible on scroll) */
+.scroll-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  transform: translateY(-100%);
+  transition: transform .25s ease;
+  background: rgba(0,0,0,.8);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #121212;
+}
+.scroll-nav .container { display: flex; gap: .75rem; padding: .6rem 1rem; align-items: center; justify-content: center; }
+.scroll-nav a { color: var(--text); padding: .35rem .75rem; border-radius: 999px; border: 1px solid #151515; }
+.scroll-nav a:hover { color: var(--accent); }
+.scroll-nav.is-visible { transform: translateY(0); }
+
 /* SECTIONS */
 .section { padding: 4rem 0; }
 .section h2 { margin-top: 0; font-size: clamp(1.5rem, 3.5vw, 2.25rem); }
