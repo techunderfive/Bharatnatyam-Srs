@@ -140,7 +140,8 @@ html { scroll-behavior: smooth; }
 #about .split__content { display: grid; align-content: start; }
 
 @media (min-width: 900px) {
-  #about .split { grid-template-columns: .8fr 1.2fr; gap: 1.25rem; }
+  /* Halve the image column width compared to previous (from .8fr to .4fr) */
+  #about .split { grid-template-columns: .4fr 1.6fr; gap: 1.25rem; }
 }
 
 
