@@ -58,6 +58,12 @@
 
 .hero__scroll { display: inline-block; margin-top: 1.25rem; color: var(--muted); }
 
+/* Mobile: make hero background contain and avoid cropping */
+@media (max-width: 600px) {
+  .hero { height: 80vh; }
+  .hero__media { background-size: contain; background-position: center top; background-repeat: no-repeat; }
+}
+
 /* STICKY SECTION NAV */
 .section-nav { display:none; }
 
@@ -78,6 +84,13 @@
 .scroll-nav a { color: var(--text); padding: .4rem .7rem; border-radius: 999px; border: 1px solid #151515; font-size: clamp(.8rem, 3.5vw, .95rem); }
 .scroll-nav a:hover { color: var(--accent); }
 .scroll-nav.is-visible { transform: translateY(0); }
+
+/* Mobile: ensure nav doesn't get cut off; enable horizontal scroll */
+@media (max-width: 480px) {
+  .scroll-nav { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .scroll-nav .container { flex-wrap: nowrap; justify-content: flex-start; gap: .4rem; padding: .4rem .5rem; }
+  .scroll-nav a { white-space: nowrap; font-size: clamp(.72rem, 3.2vw, .85rem); padding: .35rem .6rem; }
+}
 
 /* SECTIONS */
 .section { padding: 4rem 0; }
@@ -180,6 +193,11 @@ html { scroll-behavior: smooth; }
   z-index: -1;
 }
 .page-portfolio #content { position: relative; }
+@media (max-width: 600px) {
+  .page-portfolio::before {
+    background: linear-gradient(var(--bg-overlay), var(--bg-overlay)), url('../images/main.jpg') center top / contain no-repeat;
+  }
+}
 .page-portfolio h1,
 .page-portfolio h2,
 .page-inner h1,
