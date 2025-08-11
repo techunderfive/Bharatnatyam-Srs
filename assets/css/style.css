@@ -163,7 +163,9 @@ html { scroll-behavior: smooth; }
 }
 .page-portfolio #content { position: relative; }
 .page-portfolio h1,
-.page-portfolio h2 {
+.page-portfolio h2,
+.page-inner h1,
+.page-inner h2 {
   font-family: 'Playfair Display', serif;
   font-style: italic;
   font-weight: 600;
