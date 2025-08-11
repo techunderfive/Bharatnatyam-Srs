@@ -147,6 +147,23 @@ html { scroll-behavior: smooth; }
 .btn--primary { }
 .btn--secondary { background: #0e0e0e; }
 
+/* Portfolio muted background */
+.page-portfolio {
+  --bg-overlay: rgba(0,0,0,.6);
+  position: relative;
+}
+.page-portfolio::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(var(--bg-overlay), var(--bg-overlay)), url('../assets/images/main.jpg') center/cover no-repeat;
+  filter: blur(4px) saturate(0.8);
+  opacity: 0.7;
+  z-index: -1;
+}
+.page-portfolio #content { position: relative; }
+.page-portfolio h1 { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 600; letter-spacing: .2px; color: #C8A951; }
+
 /* Split layout (image + content) for About */
 #about .split { display: grid; grid-template-columns: 1fr; gap: 1rem; align-items: start; }
 #about .split__media { width: 100%; max-width: 320px; aspect-ratio: 4/5; }
