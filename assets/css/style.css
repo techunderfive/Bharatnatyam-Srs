@@ -135,13 +135,12 @@ html { scroll-behavior: smooth; }
 
 /* Split layout (image + content) for About */
 #about .split { display: grid; grid-template-columns: 1fr; gap: 1rem; align-items: start; }
-#about .split__media { width: 100%; }
+#about .split__media { width: 100%; max-width: 320px; aspect-ratio: 4/5; }
 #about .split__media img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; border: 1px solid #121212; }
 #about .split__content { display: grid; align-content: start; }
 
 @media (min-width: 900px) {
-  /* Halve the image column width compared to previous (from .8fr to .4fr) */
-  #about .split { grid-template-columns: .4fr 1.6fr; gap: 1.25rem; }
+  #about .split { grid-template-columns: auto 1fr; gap: 1.25rem; }
 }
 
 
