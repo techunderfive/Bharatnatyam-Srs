@@ -31,10 +31,26 @@
       (function() {
         var nav = document.querySelector('.scroll-nav');
         if (!nav) return;
+        var triggerY = 80;
+        function recalc() {
+          var about = document.getElementById('about');
+          if (about) {
+            var rect = about.getBoundingClientRect();
+            triggerY = rect.top + window.scrollY - 10;
+          } else {
+            triggerY = 80;
+          }
+        }
         function onScroll() {
-          if (window.scrollY > 80) { nav.classList.add('is-visible'); } else { nav.classList.remove('is-visible'); }
+          if (window.scrollY >= triggerY) {
+            nav.classList.add('is-visible');
+          } else {
+            nav.classList.remove('is-visible');
+          }
         }
         window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', function(){ recalc(); onScroll(); }, { passive: true });
+        recalc();
         onScroll();
       })();
     </script>
