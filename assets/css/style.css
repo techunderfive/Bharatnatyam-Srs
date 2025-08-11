@@ -71,8 +71,8 @@
   border-radius: 12px;
   padding: 1rem;
 }
-.card__thumb { border-radius: 10px; overflow: hidden; border: 1px solid #121212; background:#0b0b0b; margin-bottom: .75rem; }
-.card__thumb img { width: 100%; height: auto; display: block; }
+.card__thumb { border-radius: 10px; overflow: hidden; border: 1px solid #121212; background:#0b0b0b; margin-bottom: .75rem; aspect-ratio: 4/5; }
+.card__thumb img { width: 100%; height: 100%; display: block; object-fit: cover; }
 .card h3 { margin-top: 0; }
 
 /* POSTS */
