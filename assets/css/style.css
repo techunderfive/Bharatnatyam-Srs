@@ -17,6 +17,8 @@
   background-repeat: no-repeat;
   transform: scale(1.05);
   will-change: transform;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
 .hero__overlay {
@@ -207,6 +209,11 @@ html { scroll-behavior: smooth; }
   color: #C8A951;
   font-size: clamp(1.125rem, 3vw, 2rem);
 }
+
+/* Research page body font (not headings) */
+.page-research p,
+.page-research li,
+.page-research ul { font-family: Corbel, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
 
 /* Portfolio body text scales with viewport and stays smaller than headings */
 .page-portfolio p,

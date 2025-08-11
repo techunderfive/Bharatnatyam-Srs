@@ -11,16 +11,17 @@
     <link rel="stylesheet" href="{{ '/assets/css/base.css' | relative_url }}" />
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
   </head>
-  <body class="page-inner {{ page.body_class }}">
+  <body class="{% if page.url == '/' %}page-home{% else %}page-inner{% endif %} {{ page.body_class }}">
     <nav class="scroll-nav" aria-label="Site">
       <div class="container">
+        <a href="{{ '/' | relative_url }}">Home</a>
         <a href="{{ '/#about' | relative_url }}">About</a>
         <a href="{{ '/#services' | relative_url }}">Services</a>
         <a href="{{ '/portfolio/' | relative_url }}">Portfolio</a>
         <a href="{{ '/connect/' | relative_url }}">Connect</a>
         <a href="{{ '/sponsor/' | relative_url }}">Sponsor</a>
         <a href="{{ '/#articles' | relative_url }}">Articles</a>
-        <a href="{{ '/#research' | relative_url }}">Research</a>
+        <a href="{{ '/research/' | relative_url }}">Research</a>
       </div>
     </nav>
     <main id="content">{{ content }}</main>
@@ -31,6 +32,12 @@
       (function() {
         var nav = document.querySelector('.scroll-nav');
         if (!nav) return;
+        // If this is an inner page, keep the nav permanently visible
+        var isInner = document.body.classList.contains('page-inner');
+        if (isInner) {
+          nav.classList.add('is-visible');
+          return;
+        }
         var triggerY = 80;
         function recalc() {
           var about = document.getElementById('about');
