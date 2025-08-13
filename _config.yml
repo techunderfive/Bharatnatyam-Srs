@@ -1,7 +1,7 @@
 title: ShrijaSrs
 description: Personal website for Shrija — performer, speaker, researcher, and voice artist.
 url: "https://techunderfive.github.io"
-baseurl: ""
+baseurl: "/Bharatnatyam-Srs"
 
 markdown: kramdown
 permalink: pretty
