@@ -272,3 +272,9 @@ html { scroll-behavior: smooth; }
 }
 
 
+/* Global paragraph font: Calibri (headers/titles remain as defined above) */
+p { font-family: Calibri, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
+
+/* Ensure Research page paragraphs also use Calibri (lists keep their existing font) */
+.page-research p { font-family: Calibri, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
+
