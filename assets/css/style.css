@@ -122,6 +122,14 @@
   .scroll-nav a { white-space: normal; font-size: .85rem; padding: .35rem .65rem; }
 }
 
+/* Mobile: add safe area below fixed nav so titles/content are not overlapped */
+@media (max-width: 600px) {
+  /* Inner pages always show the nav, so reserve space */
+  .page-inner main#content { padding-top: 56px; }
+  /* On any page, when nav is visible (home after scroll), reserve space */
+  body.nav-visible main#content { padding-top: 56px; }
+}
+
 /* SECTIONS */
 .section { padding: 4rem 0; }
 .section h2 { margin-top: 0; font-size: clamp(1.5rem, 3.5vw, 2.25rem); }

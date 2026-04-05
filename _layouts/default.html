@@ -30,11 +30,14 @@
     <script>
       (function() {
         var nav = document.querySelector('.scroll-nav');
+        var body = document.body;
         if (!nav) return;
         // If this is an inner page, keep the nav permanently visible
         var isInner = document.body.classList.contains('page-inner');
         if (isInner) {
           nav.classList.add('is-visible');
+          // Ensure body reflects nav visibility (used for mobile offset)
+          body.classList.add('nav-visible');
           return;
         }
         var triggerY = 80;
@@ -50,8 +53,10 @@
         function onScroll() {
           if (window.scrollY >= triggerY) {
             nav.classList.add('is-visible');
+            body.classList.add('nav-visible');
           } else {
             nav.classList.remove('is-visible');
+            body.classList.remove('nav-visible');
           }
         }
         window.addEventListener('scroll', onScroll, { passive: true });
